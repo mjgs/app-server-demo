@@ -14,7 +14,7 @@ app.engine('ejs', ejs_locals);
 var app_dir = 'lib';
 var mount_path = '/apps';
 
-app = app_server(app, app_dir, mount_path);
+app = module.exports = app_server(app, app_dir, mount_path);
 
 var server = app.listen(app.get('port'), function() {
   console.log('Starting AppServer - Listening on port ' + server.address().port);
